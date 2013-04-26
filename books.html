@@ -12,9 +12,23 @@
       </ol>
     </div>
 
+
+
+
+
     <script>
       function handleResponse(response) {
         console.log(response.items)
+
+        _.each(response, function(seebook) {
+          var content = document.getElementById("todo");
+          var bookImage = document.createElement("img");
+
+          bookImage.setAttribute("src", seebook.imageLinks)
+
+        });
+
+
       }
     </script>
 
