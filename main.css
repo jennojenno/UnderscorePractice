@@ -1,0 +1,63 @@
+#modal { 
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+#trackinfo {
+	
+	width:380px;
+	height: 180px;
+	padding: 20px; 
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+	box-shadow: 10px 10px 5px;
+	border-radius: 15px;
+	text-align: center;
+	background: #c4e5c1;
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+
+}
+
+.hidden { 
+	display:none;
+}
+
+body {
+width: 960px;
+margin-left: auto;
+margin-right: auto;
+background-color: #EA474A;
+}
+
+.bookshelf {
+	float:left;
+}
+
+
+h1 { 
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+
+#main {
+background-color: #f9f9d2;
+padding: 30px;
+border-radius: 13px;
+margin-top: -9px;
+margin-bottom: -30px;
+border-style: solid;
+border-color: #868C66;
+border-width: 1px;
+font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+img { 
+
+padding: 6px;
+
+}

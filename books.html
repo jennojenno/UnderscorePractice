@@ -1,37 +1,51 @@
 <html>
   <head>
     <title>Books Underscore Practice</title>
+    <script src="/source/jquery-1.9.1.min.js"> </script> 
     <script src="underscore-min.js"></script>
+    <link href="main.css" type="text/css" rel="stylesheet">
   </head>
-  <body>
+  <body><div id="main">
     <div id="bookshelf"></div>
 
     <div id="todo">
       <ol>
         <li>Use _.each to iterate over each book and display it in the bookshelf</li>
+        <li>Use _.map to pull out the web reader URL and create a link around the book image, so that when I click it I can see inside the book.</li>
+        <li>Use _.find to find all the books with a rating of 4 or 5, and add a CSS class to them called hot. Add CSS so that the hot class is a snazzy star shape or something.</li>
+
       </ol>
     </div>
-
-
-
-
 
     <script>
       function handleResponse(response) {
         console.log(response.items)
 
-        _.each(response, function(seebook) {
-          var content = document.getElementById("todo");
-          var bookImage = document.createElement("img");
+        allbooks = response.items;
+        _.each(response.items, function(t) {
+          var title = t.volumeInfo.title;
+          var smallimg = t.volumeInfo.imageLinks.smallThumbnail;
+          var lookinside = t.volumeInfo.previewLink;
 
-          bookImage.setAttribute("src", seebook.imageLinks)
+          $('div#bookshelf').append('<p>'+title);
+
+          $('div#bookshelf').append
+          ('<a href="'+lookinside+'"> <img src="'+smallimg+'"></a>');
+
+          // <a href="lookinside"> <img src="smallimg"></a> 
+
+          _.map(allbooks, function(s) {
+
+
+        });
 
         });
 
 
-      }
+      };
     </script>
 
-    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse&key=AIzaSyAI6ELgtBqugiHQhrrtDiezuXinySBhGZ4"></script>
+  </div>
   </body>
 </html>
